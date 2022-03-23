@@ -1,5 +1,5 @@
 import React from "react";
-
+import { HeaderIcons } from "./Styled-Components/iconStyle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faStar,
@@ -12,73 +12,52 @@ import {
   faSkating,
   faBoxes,
 } from "@fortawesome/free-solid-svg-icons";
-import styled from "styled-components";
-
-const HeaderIcons = styled.div`
-  display: flex;
-  /* border: 1px solid red; */
-  padding: 8px 0;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #2e2e2e;
-  color: white;
-
-  & span {
-    display: block;
-    font-size: 10px;
-  }
-
-  & div {
-    /* border: 1px solid blue; */
-    width: 7%;
-    padding: 1.7% 0;
-    border-radius: 80px;
-    text-align: center;
-    background-color: #303030;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
-  }
-`;
 
 class Icon extends React.Component {
   constructor(props) {
     super(props);
   }
+
   render() {
     return (
       <HeaderIcons>
-        <div>
+        <div className="markers">
+          <div>1</div>
+          <div>2</div>
+        </div>
+        <div className="iconDiv">
           <FontAwesomeIcon icon={faStar} size="2x" />
           <span>Featured</span>
         </div>
-        <div>
+        <div className="iconDiv">
           <FontAwesomeIcon icon={faGun} size="2x" />
           <span>Armoury</span>
         </div>
-        <div>
+        <div className="iconDiv">
           <FontAwesomeIcon icon={faSwimmer} size="2x" />
           <span>Aquatics</span>
         </div>
-        <div style={{ backgroundColor: "#393939" }}>
+        <div style={{ backgroundColor: "#393939" }} className="iconDiv">
           <FontAwesomeIcon icon={faBicycle} size="2x" />
           <span>Cycling</span>
         </div>
-        <div>
+        <div className="iconDiv">
           <FontAwesomeIcon icon={faHorseHead} size="2x" />
           <span>Equestrian</span>
         </div>
-        <div>
+        <div className="iconDiv">
           <FontAwesomeIcon icon={faSkating} size="2x" />
           <span>Extreme</span>
         </div>
-        <div>
+        <div className="iconDiv">
           <FontAwesomeIcon icon={faGolfBall} size="2x" />
           <span>Golf</span>
         </div>
-        <div>
+        <div className="iconDiv">
           <FontAwesomeIcon icon={faBoxes} size="2x" />
           <span>Gymnastics</span>
         </div>
-        <div>
+        <div className="iconDiv">
           <FontAwesomeIcon icon={faWater} size="2x" />
           <span>Lake & Sea</span>
         </div>

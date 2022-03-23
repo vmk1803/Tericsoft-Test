@@ -1,8 +1,8 @@
 import { v4 as uuid } from "uuid";
+import { ADD_DATA, ADD_TAGS } from "./actionTypes";
 
 const init = {
   data: {
-    icons: [{ iconName: "faStar", name: "Featured" }],
     tags: [
       { id: uuid(), tagName: "BMX" },
       { id: uuid(), tagName: "Mountain" },
@@ -52,6 +52,17 @@ const init = {
 
 const reducer = (state = init, { type, payload }) => {
   switch (type) {
+    case ADD_DATA:
+      return {
+        ...state,
+        data: { ...state.data, core: payload },
+      };
+
+    case ADD_TAGS:
+      return {
+        ...state,
+        data: { ...state.data, tags: [...state.data.tags, payload] },
+      };
     default:
       return state;
   }
