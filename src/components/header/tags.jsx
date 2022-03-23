@@ -6,14 +6,14 @@ class Tags extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tagNames: store.getState().data.tags,
+      tagNames: store.getState().tags,
     };
   }
 
   store = () => {
     store.subscribe(() => {
       this.setState({
-        tagNames: store.getState().data.tags,
+        tagNames: store.getState().tags,
       });
     });
   };
